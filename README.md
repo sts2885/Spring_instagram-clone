@@ -1,3 +1,21 @@
+<h1> 개인 공부를 위해 기존에 다른분들이 개발하신 instagram clone code를 fork해 가지고 왔습니다. </h1>
+<br/>
+<h1> 원본의 링크는 </h1> [여기에 있습니다.](https://github.com/Instagram-Clone-Coding)
+<br/>
+
+<h2> 원본 레포지토리에는 개발된 front-end, back-end의 코드가 aws 서버에 올라가는 구조로 되어 있었지만,</h2>
+<br/>
+<h2> 원본 레포지토리에는 개발된 front-end, back-end의 코드가 aws 서버에 올라가는 구조로 되어 있었지만,</h2>
+<br/>
+<h2> 저는 이를 EKS에 띄우려고 합니다.</h2>
+<br/>
+<h3> 따라서 git을 맨 처음 commit으로 되돌리고, 중간중간 완성되는 코드를 보면서 class diagram, cloud architecture 등을 그리고</h3>
+<br/>
+<h3> Dockerfile, Terraform 코드, yaml 파일을 작성해 eks 배포를 할 예정 입니다.</h3>
+
+<h1>ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ</h1>
+<br/>
+
 <div id="top"></div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
