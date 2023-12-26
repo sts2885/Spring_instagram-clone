@@ -17,6 +17,10 @@ import cloneproject.Instagram.vo.UsernameWithImage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.stream.Collectors;
+import static java.util.stream.Collectors.*;
+
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -57,10 +61,10 @@ public class FollowService {
         List<Follow> follows = followRepository.findAllByMemberId(member.getId());
         List<Member> followingMembers = follows.stream()
                                                 .map(follow->follow.getFollowMember())
-                                                .toList();
+                                                .collect(Collectors.toList());
         List<UsernameWithImage> result = followingMembers.stream()
                                                 .map(this::convertMemberToUsernameWithImages)
-                                                .toList();
+                                                .collect(Collectors.toList());
         return result;
     }
 
@@ -71,10 +75,10 @@ public class FollowService {
         List<Follow> follows = followRepository.findAllByFollowMemberId(member.getId());
         List<Member> followingMembers = follows.stream()
                                                 .map(follow->follow.getMember())
-                                                .toList();
+                                                .collect(Collectors.toList());
         List<UsernameWithImage> result = followingMembers.stream()
                                                 .map(this::convertMemberToUsernameWithImages)
-                                                .toList();
+                                                .collect(Collectors.toList());
         return result;
     }
 
@@ -89,7 +93,7 @@ public class FollowService {
         List<Follow> follows = followRepository.findAllByMemberId(Long.valueOf(memberId));
         List<Long> result = follows.stream()
                                         .map(follow->follow.getFollowMember().getId())
-                                        .toList();
+                                        .collect(Collectors.toList());
         return result;
 
     }
